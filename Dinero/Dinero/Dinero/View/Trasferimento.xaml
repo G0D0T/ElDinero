@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Dinero.Helpers;assembly=Dinero"
+             x:Class="Dinero.View.Trasferimento"
+             Title="{i18n:Translate Transfer}">
+    <Grid RowSpacing="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="65*"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="{i18n:Translate ConCar}" FontSize="Large" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Label Text="{i18n:Translate Quantity}" Grid.Row="1" Grid.Column="0" />
+        <Entry Placeholder="{i18n:Translate HowMuch}" x:Name="concarEntry" Grid.Row="1" Grid.Column="1" />
+        <Button Text="{i18n:Translate Go}" BackgroundColor="Aquamarine"
+                Clicked="Button_Clicked1" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Label Text="{i18n:Translate CarCon}" FontSize="Large" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Label Text="{i18n:Translate Quantity}" Grid.Row="4" Grid.Column="0" />
+        <Entry Placeholder="{i18n:Translate HowMuch}" x:Name="carconEntry" Grid.Row="4" Grid.Column="1" />
+        <Button Text="{i18n:Translate Go}" BackgroundColor="Yellow"
+                Clicked="Button_Clicked2" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
+    </Grid>
+</ContentPage>

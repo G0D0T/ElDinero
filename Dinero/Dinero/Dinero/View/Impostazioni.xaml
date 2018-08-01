@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Dinero.Helpers;assembly=Dinero"
+             x:Class="Dinero.View.Impostazioni"
+             Title="{i18n:Translate Settings}">
+    <StackLayout>
+        <Label Text="{i18n:Translate DeleteCash}" FontSize="Large" />
+        <Button Text="{i18n:Translate Go}" Clicked="Cancella_Contanti" />
+        <Label Text="--------------------------------------------" />
+        <Label Text="{i18n:Translate DeleteCard}" FontSize="Large" />
+        <Button Text="{i18n:Translate Go}" Clicked="Cancella_Carta" />
+        <Label Text="--------------------------------------------" />
+        <Label Text="{i18n:Translate DeleteAll}" FontSize="Large" />
+        <Button Text="{i18n:Translate Go}" Clicked="Cancella_Tutto" TextColor="Red" />
+    </StackLayout>
+</ContentPage>

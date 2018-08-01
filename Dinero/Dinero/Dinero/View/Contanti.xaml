@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Dinero.Helpers;assembly=Dinero"
+             x:Class="Dinero.View.Contanti"
+             Title="{i18n:Translate Cash}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="{i18n:Translate Incomes}" TextColor="Green" Grid.Row="0" Grid.Column="0" />
+        <Label Text="" x:Name="entrateLabel" Grid.Row="0" Grid.Column="1" />
+        <Label Text="{i18n:Translate Expenses}" TextColor="Red" Grid.Row="1" Grid.Column="0" />
+        <Label Text="" x:Name="usciteLabel" Grid.Row="1" Grid.Column="1" />
+        <Label Text="{i18n:Translate Balance}" FontSize="Large" Grid.Row="2" Grid.Column="0" />
+        <Label Text="" x:Name="saldoLabel" FontSize="Large" Grid.Row="2" Grid.Column="1" />
+        <Picker x:Name="picker" SelectedIndexChanged="OnPicker" Title="{i18n:Translate Select}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <Picker.Items>
+                <x:String>All</x:String>
+                <x:String>Last Week</x:String>
+                <x:String>Last Month</x:String>
+            </Picker.Items>
+        </Picker>
+        <ListView x:Name="contantiLw" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HasUnevenRows="True" ItemSelected="OnSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="50, 10, 10, 10">
+                            <Label Text="{Binding Importo}" FontSize="Large"/>
+                            <Label Text="{Binding Descrizione}" />
+                            <Label Text="{Binding Quando}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="{i18n:Translate AddIncome}" TextColor="White" BackgroundColor="Green" 
+                Clicked="Button_Clicked_Contanti1" Grid.Row="5" Grid.Column="0" />
+        <Button Text="{i18n:Translate AddExpense}" TextColor="White" BackgroundColor="Red" 
+                Clicked="Button_Clicked_Contanti2" Grid.Row="5" Grid.Column="1" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Dinero.Helpers;assembly=Dinero"
+             x:Class="Dinero.View.Nuovo"
+             Title="{i18n:Translate Operation}">
+    <StackLayout>
+        <Label Text="{i18n:Translate Amount}" />
+        <Entry x:Name="impEntry" Placeholder="{i18n:Translate EnterValue}" />
+        <Label Text="{i18n:Translate Description}" />
+        <Entry x:Name="descEntry" Placeholder="{i18n:Translate EnterDesc}" />
+        <Button Text="{i18n:Translate Go}" FontSize="Large" Clicked="Button_Clicked" />
+    </StackLayout>
+</ContentPage>
